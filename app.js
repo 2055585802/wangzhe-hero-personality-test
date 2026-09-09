@@ -661,6 +661,7 @@ const QUESTIONS = [
 let currentQ = 0;
 let answers = {}; // { 题索引: archetypeKey } 记录每道题的答案
 let activeQuestions = []; // 本次测试随机抽取的题目
+let isAdvancing = false; // 自动跳转期间锁定，防止连点
 
 const QUIZ_SIZE = 16; // 每次测试抽 16 道题
 
@@ -730,15 +731,29 @@ function renderQuestion() {
 }
 
 function selectOption(opt) {
+  if (isAdvancing) return; // 跳转期间忽略重复点击
+  isAdvancing = true;
+
   answers[currentQ] = opt.archetype;
 
-  // 选中后自动进入下一题（带短暂高亮反馈）
-  if (currentQ < activeQuestions.length - 1) {
-    currentQ++;
-    setTimeout(() => renderQuestion(), 150);
-  } else {
-    setTimeout(() => showResult(), 150);
-  }
+  // 立即高亮当前选项作为反馈
+  const optionBtns = optionsEl.querySelectorAll(".option");
+  const selectedIdx = activeQuestions[currentQ].options.findIndex(
+    (o) => o.archetype === opt.archetype && o.text === opt.text
+  );
+  optionBtns.forEach((btn) => btn.classList.remove("selected"));
+  if (selectedIdx >= 0) optionBtns[selectedIdx].classList.add("selected");
+
+  // 选中后短暂停顿（让用户看到选中反馈），再自动进入下一题
+  setTimeout(() => {
+    if (currentQ < activeQuestions.length - 1) {
+      currentQ++;
+      renderQuestion();
+    } else {
+      showResult();
+    }
+    isAdvancing = false;
+  }, 200);
 }
 
 function goPrev() {
