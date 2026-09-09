@@ -6,3 +6,7 @@
 Thumbs.db
 *.log
 home-bg-crop.png
+
+# 本地开发服务器
+server.js
+server.log
