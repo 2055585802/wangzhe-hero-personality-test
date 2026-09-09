@@ -201,24 +201,24 @@ const QUESTIONS = [
     title: "你辛苦打拼的成果，被有权势的人一句话就夺走了。你会怎么做？",
     options: [
       { text: "当面掀桌，用实力让他收回这句话", archetype: "jianxia" },
-      { text: "先记下来，等合适的机会再说", archetype: "yinren" },
+      { text: "先沉下来，悄悄准备着", archetype: "yinren" },
       { text: "冷静分析局势，找到对方软肋再从容布局", archetype: "zhizhe" },
-      { text: "守住底线，堂堂正正讨个说法", archetype: "gangzheng" },
+      { text: "守住底线，讨个说法", archetype: "gangzheng" },
     ],
   },
   {
     title: "你被羞辱了，周围人都在看你的笑话。你的第一反应是？",
     options: [
       { text: "当场反击，绝不让自己憋屈", archetype: "jianxia" },
-      { text: "忍住不发作，但心里记着这事", archetype: "yinren" },
-      { text: "保持风度，一笑而过", archetype: "lengjing" },
-      { text: "用玩笑化解尴尬，让大家别那么紧张", archetype: "lexiao" },
+      { text: "不露声色，心里有数", archetype: "yinren" },
+      { text: "冷静看清局面", archetype: "lengjing" },
+      { text: "用玩笑化解尴尬，让大家松口气", archetype: "lexiao" },
     ],
   },
   {
     title: "朋友有难，需要你挺身而出，但可能会搭上自己的前程。你会？",
     options: [
-      { text: "会出手，但也会掂量一下代价", archetype: "rexue" },
+      { text: "会出手，但心里也会有点纠结", archetype: "rexue" },
       { text: "默默守护，尽力帮他但不声张", archetype: "shouhu" },
       { text: "先盘算清楚，找到两全其美的办法", archetype: "zhizhe" },
       { text: "按自己的原则判断，该帮就帮、该拒绝就拒绝", archetype: "gangzheng" },
@@ -227,9 +227,9 @@ const QUESTIONS = [
   {
     title: "你心里有一个很大的目标，但实现它需要很长时间的蛰伏。你愿意吗？",
     options: [
-      { text: "愿意，但过程中也会找点乐子", archetype: "yinren" },
+      { text: "愿意，我心里有数", archetype: "yinren" },
       { text: "愿意，我会一步步稳扎稳打地靠近", archetype: "zhizhe" },
-      { text: "不太愿意，我更想现在就活得开心", archetype: "lexiao" },
+      { text: "不愿意，我现在活得开心最重要", archetype: "lexiao" },
       { text: "愿意，但我也希望路上能多看看风景", archetype: "bawang" },
     ],
   },
@@ -245,8 +245,8 @@ const QUESTIONS = [
   {
     title: "你被要求做一件违背内心原则的事，你会？",
     options: [
-      { text: "当场拒绝，我不会做这种事", archetype: "gangzheng" },
-      { text: "答应着，但按我自己的方式处理", archetype: "yinren" },
+      { text: "当场说不，这不是我的风格", archetype: "gangzheng" },
+      { text: "答应着，按我自己的方式来", archetype: "yinren" },
       { text: "权衡利弊，若利大于弊就先忍着", archetype: "lengjing" },
       { text: "为了在乎的人，我可以委屈自己", archetype: "shouhu" },
     ],
@@ -254,10 +254,10 @@ const QUESTIONS = [
   {
     title: "你更喜欢哪种生活方式？",
     options: [
-      { text: "到处走走，不喜欢被一个地方绑住", archetype: "jianxia" },
-      { text: "探索未知，看遍世界的风景", archetype: "tanxian" },
+      { text: "想去没去过的地方走走看看", archetype: "tanxian" },
+      { text: "探索未知，看遍世界是我的梦想", archetype: "tanxian" },
       { text: "安稳平淡，陪伴重要的人", archetype: "shouhu" },
-      { text: "随性一些，每天过得开心就行", archetype: "lexiao" },
+      { text: "随性一点，每天开开心心就够了", archetype: "lexiao" },
     ],
   },
   {
@@ -265,17 +265,17 @@ const QUESTIONS = [
     options: [
       { text: "冲在前面，靠行动带动大家", archetype: "rexue" },
       { text: "冷静分析，给出破局的关键思路", archetype: "zhizhe" },
-      { text: "稳定军心，把该担的担子扛起来", archetype: "gangzheng" },
+      { text: "稳定军心，关键时刻得有人扛事", archetype: "gangzheng" },
       { text: "照顾每个人的情绪，把大家凝聚在一起", archetype: "shouhu" },
     ],
   },
   {
     title: "面对一个强大的对手，你会怎么看待他？",
     options: [
-      { text: "挺有挑战性的，正好试试自己的实力", archetype: "rexue" },
+      { text: "挺刺激的，想试试自己几斤几两", archetype: "rexue" },
       { text: "研究他，直到找到他的破绽", archetype: "lengjing" },
       { text: "我心里有更大的目标，不在意他", archetype: "bawang" },
-      { text: "不把他当回事，我走我自己的路", archetype: "tanxian" },
+      { text: "不把他当回事，我走自己的路", archetype: "tanxian" },
     ],
   },
   {
@@ -300,26 +300,26 @@ const QUESTIONS = [
     title: "面对背叛你的人，你会？",
     options: [
       { text: "当面把话说清楚，不想再忍", archetype: "jianxia" },
-      { text: "心里记着这事，慢慢疏远", archetype: "yinren" },
-      { text: "理性分析，从此保持距离", archetype: "lengjing" },
-      { text: "按自己的原则行事，不被他影响", archetype: "gangzheng" },
+      { text: "心里记着，慢慢找机会回敬", archetype: "yinren" },
+      { text: "冷静复盘，看清他是什么样的人", archetype: "lengjing" },
+      { text: "按原则来，不被他带走", archetype: "gangzheng" },
     ],
   },
   {
     title: "你的朋友通常会怎么形容你？",
     options: [
-      { text: "靠谱，答应的事一定做到", archetype: "rexue" },
+      { text: "挺拼的，能冲就冲", archetype: "rexue" },
       { text: "聪明有想法，总能点醒大家", archetype: "zhizhe" },
-      { text: "温柔体贴，让人想依赖", archetype: "shouhu" },
-      { text: "和ta在一起总是很轻松", archetype: "lexiao" },
+      { text: "比较细致，会照顾人", archetype: "shouhu" },
+      { text: "和ta在一起没压力，舒服自在", archetype: "lexiao" },
     ],
   },
   {
     title: "你更愿意去哪个地方生活？",
     options: [
-      { text: "繁华的都城，那里机会多", archetype: "bawang" },
-      { text: "宁静的山水，过得简单点", archetype: "gangzheng" },
-      { text: "没去过的地方，一路新鲜", archetype: "tanxian" },
+      { text: "繁华的都城，那里舞台大", archetype: "bawang" },
+      { text: "宁静的山水，过得简单踏实", archetype: "gangzheng" },
+      { text: "没去过的地方，一路新鲜刺激", archetype: "tanxian" },
       { text: "到处跑，不固定一个地方", archetype: "jianxia" },
     ],
   },
@@ -329,25 +329,25 @@ const QUESTIONS = [
       { text: "跃跃欲试，立刻冲上去", archetype: "rexue" },
       { text: "先冷静谋划，再精准出手", archetype: "lengjing" },
       { text: "正好证明一下我可以", archetype: "bawang" },
-      { text: "享受过程，输赢都是体验", archetype: "tanxian" },
+      { text: "享受过程，输赢都是种体验", archetype: "tanxian" },
     ],
   },
   {
     title: "如果人生可以重来，你最想改变什么？",
     options: [
-      { text: "没什么想改的，现在这样就挺好", archetype: "lexiao" },
+      { text: "没什么想改的，现在这样挺好的", archetype: "lexiao" },
       { text: "早点看清人心，少走弯路", archetype: "lengjing" },
       { text: "抓住更多机会，登上更高的位置", archetype: "bawang" },
-      { text: "多出去走走，看看更大的世界", archetype: "tanxian" },
+      { text: "多出去走走，见见更大的世界", archetype: "tanxian" },
     ],
   },
   {
     title: "你的理想被别人否定，甚至嘲笑。你会怎么回应？",
     options: [
       { text: "懒得争辩，我走我的路", archetype: "jianxia" },
-      { text: "记下来，等做出结果再说", archetype: "yinren" },
+      { text: "记下这笔账，等我有能力再说", archetype: "yinren" },
       { text: "冷静复盘，看看他们说的有没有道理", archetype: "lengjing" },
-      { text: "坚持己见，我认定的事不轻易动", archetype: "gangzheng" },
+      { text: "坚持己见，认定了就不动摇", archetype: "gangzheng" },
     ],
   },
   {
@@ -365,7 +365,7 @@ const QUESTIONS = [
       { text: "想冲，但也会评估一下风险", archetype: "rexue" },
       { text: "仔细评估，有把握了再上", archetype: "zhizhe" },
       { text: "为了目标，值得赌一把", archetype: "bawang" },
-      { text: "风险大才有意思，输赢都精彩", archetype: "tanxian" },
+      { text: "风险大才有意思，精彩过就好", archetype: "tanxian" },
     ],
   },
   {
@@ -374,13 +374,13 @@ const QUESTIONS = [
       { text: "靠谱实在的，相处踏实", archetype: "rexue" },
       { text: "聪明有深度的，能聊到一起", archetype: "lengjing" },
       { text: "温柔包容的，相处不累", archetype: "shouhu" },
-      { text: "有趣好玩的，天天都开心", archetype: "lexiao" },
+      { text: "有趣好玩的，天天开心最重要", archetype: "lexiao" },
     ],
   },
   {
     title: "如果团队里有人偷懒拖后腿，你会？",
     options: [
-      { text: "找合适的机会跟对方聊", archetype: "gangzheng" },
+      { text: "按规则来，该说就说", archetype: "gangzheng" },
       { text: "默默多扛一些，先把事做成", archetype: "shouhu" },
       { text: "想办法激励他，把大家拧成一股绳", archetype: "zhizhe" },
       { text: "不强求，我做好自己那份就行", archetype: "tanxian" },
@@ -392,7 +392,7 @@ const QUESTIONS = [
       { text: "和知己聊聊天，谈谈想法", archetype: "jianxia" },
       { text: "一个人安静地读点东西", archetype: "lengjing" },
       { text: "陪伴家人，享受温馨时光", archetype: "shouhu" },
-      { text: "约上好友，玩个尽兴", archetype: "lexiao" },
+      { text: "约上好友，玩到尽兴", archetype: "lexiao" },
     ],
   },
   {
@@ -400,7 +400,7 @@ const QUESTIONS = [
     options: [
       { text: "规则不喜欢，可以变通", archetype: "jianxia" },
       { text: "规则要灵活运用，看情况", archetype: "zhizhe" },
-      { text: "规则必须遵守，这是底线", archetype: "gangzheng" },
+      { text: "规则得守，这是我的底线", archetype: "gangzheng" },
       { text: "规则是强者定的，我要成为强者", archetype: "bawang" },
     ],
   },
@@ -408,7 +408,7 @@ const QUESTIONS = [
     title: "你更容易被哪种故事打动？",
     options: [
       { text: "英雄迟暮、壮士断腕的悲壮", archetype: "rexue" },
-      { text: "隐忍多年、慢慢翻盘的爽快", archetype: "yinren" },
+      { text: "沉得住气、慢慢翻盘的故事", archetype: "yinren" },
       { text: "默默守护、至死不渝的深情", archetype: "shouhu" },
       { text: "白手起家、问鼎天下的传奇", archetype: "bawang" },
     ],
@@ -453,9 +453,9 @@ const QUESTIONS = [
     title: "遇到委屈的时候，你习惯怎么消化？",
     options: [
       { text: "当场说出来，不想憋在心里", archetype: "jianxia" },
-      { text: "心里记着这事", archetype: "yinren" },
+      { text: "咽下，但不会忘", archetype: "yinren" },
       { text: "自己消化，过会儿就好了", archetype: "lengjing" },
-      { text: "吃点好吃的、玩一玩，就忘了", archetype: "lexiao" },
+      { text: "吃点好吃的、玩一玩，气就消了", archetype: "lexiao" },
     ],
   },
   {
@@ -464,14 +464,14 @@ const QUESTIONS = [
       { text: "身先士卒，自己带头做", archetype: "rexue" },
       { text: "运筹帷幄，安排好每个人的位置", archetype: "zhizhe" },
       { text: "恩威并施，牢牢掌控全局", archetype: "bawang" },
-      { text: "以身作则，守住规矩", archetype: "gangzheng" },
+      { text: "以身作则，先把规矩立起来", archetype: "gangzheng" },
     ],
   },
   {
     title: "你心中「酷」的定义是？",
     options: [
       { text: "敢作敢当，不含糊", archetype: "jianxia" },
-      { text: "不声张，关键时刻一鸣惊人", archetype: "yinren" },
+      { text: "平时不显山露水，关键时出手", archetype: "yinren" },
       { text: "云淡风轻，看透一切", archetype: "lengjing" },
       { text: "无所畏惧，说走就走", archetype: "tanxian" },
     ],
@@ -479,9 +479,9 @@ const QUESTIONS = [
   {
     title: "你最近的一个小目标是？",
     options: [
-      { text: "学会一个新东西", archetype: "yinren" },
+      { text: "悄悄提升自己", archetype: "yinren" },
       { text: "把生活过得开心一点", archetype: "lexiao" },
-      { text: "去一个没去过的地方看看", archetype: "tanxian" },
+      { text: "去一个没去过的地方看看新鲜", archetype: "tanxian" },
       { text: "帮身边的朋友解决一个难题", archetype: "shouhu" },
     ],
   },
@@ -489,16 +489,16 @@ const QUESTIONS = [
     title: "遇到不公平的竞争，你会怎么应对？",
     options: [
       { text: "用实力说话", archetype: "rexue" },
-      { text: "先记下来，找准机会再回应", archetype: "yinren" },
+      { text: "先沉下来，等合适时机再出手", archetype: "yinren" },
       { text: "冷静寻找规则漏洞，巧妙取胜", archetype: "zhizhe" },
-      { text: "守住底线，堂堂正正赢回来", archetype: "gangzheng" },
+      { text: "守住底线，赢就要赢得正", archetype: "gangzheng" },
     ],
   },
   {
     title: "你更喜欢一个人还是和大家在一起？",
     options: [
       { text: "一个人自在", archetype: "tanxian" },
-      { text: "和大家在一起，热闹开心", archetype: "lexiao" },
+      { text: "和大家在一起，热闹开心才有意思", archetype: "lexiao" },
       { text: "独处时思考，偶尔小聚", archetype: "lengjing" },
       { text: "看情况，重要的人在我就在", archetype: "shouhu" },
     ],
@@ -517,7 +517,7 @@ const QUESTIONS = [
     options: [
       { text: "敢冲敢拼、向前不退", archetype: "rexue" },
       { text: "运筹帷幄、思路清晰", archetype: "zhizhe" },
-      { text: "扛得住事、慢慢翻盘", archetype: "yinren" },
+      { text: "慢慢熬，等翻盘的机会", archetype: "yinren" },
       { text: "洒脱自在、不被束缚", archetype: "jianxia" },
     ],
   },
@@ -534,8 +534,8 @@ const QUESTIONS = [
     title: "你在团队里最不想成为哪种角色？",
     options: [
       { text: "被人摆布的棋子", archetype: "bawang" },
-      { text: "拖后腿的累赘", archetype: "yinren" },
-      { text: "没有主见的附和者", archetype: "gangzheng" },
+      { text: "被人看轻的那种", archetype: "yinren" },
+      { text: "没有主见的人", archetype: "gangzheng" },
       { text: "被束缚在条条框框里的人", archetype: "jianxia" },
     ],
   },
@@ -543,9 +543,9 @@ const QUESTIONS = [
     title: "你更相信哪种成功之道？",
     options: [
       { text: "敢打敢拼，一往无前", archetype: "rexue" },
-      { text: "厚积薄发，慢慢积累", archetype: "yinren" },
+      { text: "先蛰伏，再发力的那种", archetype: "yinren" },
       { text: "运筹帷幄，步步为营", archetype: "zhizhe" },
-      { text: "脚踏实地，稳扎稳打", archetype: "gangzheng" },
+      { text: "脚踏实地，稳扎稳打才靠谱", archetype: "gangzheng" },
     ],
   },
   {
@@ -572,13 +572,13 @@ const QUESTIONS = [
       { text: "一眼看穿真相的洞察力", archetype: "lengjing" },
       { text: "关键时刻能扛事的力量", archetype: "rexue" },
       { text: "运筹帷幄的思路", archetype: "zhizhe" },
-      { text: "温暖治愈他人的能力", archetype: "lexiao" },
+      { text: "温暖治愈他人的能力", archetype: "shouhu" },
     ],
   },
   {
     title: "面对生活的压力，你通常怎么扛？",
     options: [
-      { text: "慢慢消化，让自己变强", archetype: "yinren" },
+      { text: "扛下来，把它变成自己的力量", archetype: "yinren" },
       { text: "乐观面对，笑一笑就过去了", archetype: "lexiao" },
       { text: "自己冷静处理", archetype: "lengjing" },
       { text: "找朋友倾诉，一起分担", archetype: "shouhu" },
@@ -590,7 +590,7 @@ const QUESTIONS = [
       { text: "波澜壮阔，轰轰烈烈", archetype: "rexue" },
       { text: "做出成绩，站上一定位置", archetype: "bawang" },
       { text: "自由随性，无拘无束", archetype: "tanxian" },
-      { text: "温暖安稳，岁月静好", archetype: "gangzheng" },
+      { text: "温暖安稳，岁月静好最幸福", archetype: "gangzheng" },
     ],
   },
   {
@@ -614,7 +614,7 @@ const QUESTIONS = [
   {
     title: "遇到困难，你最先想到谁？",
     options: [
-      { text: "我自己，靠自己最靠谱", archetype: "gangzheng" },
+      { text: "先靠自己，靠山山倒", archetype: "gangzheng" },
       { text: "朋友，一起想办法", archetype: "rexue" },
       { text: "重要的人，有他在我就安心", archetype: "shouhu" },
       { text: "谁也不找，自己默默扛", archetype: "tanxian" },
@@ -642,7 +642,7 @@ const QUESTIONS = [
     title: "如果只能选一句人生信条？",
     options: [
       { text: "活着就要尽兴", archetype: "rexue" },
-      { text: "慢慢来，比较快", archetype: "yinren" },
+      { text: "沉得住气，才走得更远", archetype: "yinren" },
       { text: "我命由我不由天", archetype: "bawang" },
       { text: "但行好事，莫问前程", archetype: "gangzheng" },
     ],
@@ -653,7 +653,7 @@ const QUESTIONS = [
       { text: "壮阔的场面，金戈铁马", archetype: "rexue" },
       { text: "宁静的山水，远离喧嚣", archetype: "lengjing" },
       { text: "没去过的远方，一路惊喜", archetype: "tanxian" },
-      { text: "热闹的街市，人间烟火", archetype: "lexiao" },
+      { text: "热闹的街市，人间烟火最动人", archetype: "lexiao" },
     ],
   },
 ];
@@ -666,6 +666,16 @@ let activeQuestions = []; // 本次测试随机抽取的题目
 let isAdvancing = false; // 自动跳转期间锁定，防止连点
 
 const QUIZ_SIZE = 16; // 每次测试抽 16 道题
+
+// 预计算：每个原型在完整题库中作为选项的总出现次数（用于得分归一化）
+const ARCHETYPE_EXPECT = {};
+(function () {
+  for (const k in ARCHETYPES) {
+    let n = 0;
+    for (const q of QUESTIONS) for (const o of q.options) if (o.archetype === k) n++;
+    ARCHETYPE_EXPECT[k] = n / QUESTIONS.length; // 该原型每题平均出现次数
+  }
+})();
 
 // Fisher-Yates 洗牌
 function shuffle(arr) {
@@ -776,21 +786,51 @@ function calcScores() {
 }
 
 // ===== 结果匹配 =====
-// 按原型得分排序
+// 按原型得分排序——使用"按题库曝光归一化"的得分，消除原型之间曝光不均导致的偏差
 function rankedArchetypes() {
-  const scores = calcScores();
-  const list = Object.keys(ARCHETYPES).map((key) => ({
-    key: key,
-    archetype: ARCHETYPES[key],
-    score: scores[key] || 0,
-  }));
-  list.sort((a, b) => b.score - a.score);
+  const rawScores = calcScores();
+  const list = Object.keys(ARCHETYPES).map((key) => {
+    // 归一化得分 = 实际命中数 / 期望命中数
+    // 期望命中数 = 抽中题数 × 该原型在题库中的平均出现率
+    // 这样无论该原型在题库里出现多少次，得分都在 [0, 1] 之间可比
+    const expected = QUIZ_SIZE * (ARCHETYPE_EXPECT[key] || 0);
+    const actual = rawScores[key] || 0;
+    const normScore = expected > 0 ? actual / expected : 0;
+    return {
+      key: key,
+      archetype: ARCHETYPES[key],
+      score: actual,
+      normScore: normScore,
+    };
+  });
+  list.sort((a, b) => b.normScore - a.normScore);
   return list;
+}
+
+// 软胜出：在得分接近的多个原型中按权重随机选一个，让所有原型都有出头机会
+function pickTopArchetype(ranking) {
+  const top = ranking[0];
+  if (!top) return null;
+  // 候选：normScore 与第一名差距 < 0.18（约 1 题以内）的所有原型
+  const candidates = ranking.filter(
+    (item) => top.normScore - item.normScore <= 0.18 && item.normScore > 0
+  );
+  // 加权随机：normScore^4 让高分仍占优，但低分候选也有真实机会
+  const weights = candidates.map((item) => Math.pow(item.normScore, 4));
+  const sum = weights.reduce((a, b) => a + b, 0);
+  if (sum === 0) return candidates[0];
+  let r = Math.random() * sum;
+  for (let i = 0; i < candidates.length; i++) {
+    r -= weights[i];
+    if (r <= 0) return candidates[i];
+  }
+  return candidates[0];
 }
 
 function showResult() {
   const ranking = rankedArchetypes();
-  const top = ranking[0];
+  // 软胜出：在得分接近的候选原型中加权随机，提升多样性
+  const top = pickTopArchetype(ranking);
   const arch = top.archetype;
   const hero = HEROES[arch.hero];
 
@@ -803,12 +843,12 @@ function showResult() {
     .filter((key) => CLAN_HEROES[key])
     .map((key) => CLAN_HEROES[key]);
 
-  // 原型亲和度排名条（Top 4）
-  const maxScore = top.score || 1;
+  // 原型亲和度排名条（Top 4）：用归一化得分计算比例
+  const maxScore = top.normScore || 1;
   const rankRows = ranking
     .slice(0, 4)
     .map((item, idx) => {
-      const pct = Math.round((item.score / maxScore) * 100);
+      const pct = Math.round((item.normScore / maxScore) * 100);
       const medal = ["🥇", "🥈", "🥉", "4"][idx];
       return (
         '<div class="rank-row">' +
