@@ -666,3 +666,90 @@ body {
     transform: translateY(-1px);
   }
 }
+
+/* ===== 验证码入口 ===== */
+#gate {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(ellipse at 20% 0%, rgba(74, 168, 255, 0.18), transparent 50%),
+    radial-gradient(ellipse at 80% 100%, rgba(245, 200, 66, 0.12), transparent 50%),
+    linear-gradient(180deg, #0d1b2a 0%, #08121e 100%);
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+#gate.unlocked {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.gate-card {
+  width: min(88vw, 360px);
+  background: var(--card);
+  border: 1px solid rgba(245, 200, 66, 0.25);
+  border-radius: 18px;
+  padding: 34px 28px 30px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+  animation: slideUp 0.5s ease both;
+}
+.gate-mark {
+  font-size: 44px;
+  line-height: 1;
+  margin-bottom: 14px;
+}
+.gate-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+.gate-sub {
+  font-size: 13px;
+  color: var(--text-dim);
+  margin-bottom: 22px;
+}
+.gate-input {
+  width: 100%;
+  padding: 13px 16px;
+  font-size: 18px;
+  letter-spacing: 4px;
+  text-align: center;
+  color: var(--text);
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(157, 180, 204, 0.4);
+  border-radius: 12px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.gate-input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(245, 200, 66, 0.15);
+}
+.gate-error {
+  min-height: 20px;
+  font-size: 12px;
+  color: #ff6b6b;
+  margin-top: 8px;
+}
+.gate-btn {
+  width: 100%;
+  padding: 13px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #1a1a1a;
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+.gate-btn:active {
+  transform: scale(0.97);
+  filter: brightness(0.95);
+}

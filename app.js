@@ -971,6 +971,35 @@ function reset() {
   showPage(quizPage);
 }
 
+// ===== 验证码入口 =====
+const GATE_CODE = "8520";
+(function initGate() {
+  const gate = document.getElementById("gate");
+  const input = document.getElementById("gateInput");
+  const btn = document.getElementById("gateBtn");
+  const err = document.getElementById("gateError");
+  if (!gate || !input || !btn) return;
+
+  function tryUnlock() {
+    if (input.value.trim() === GATE_CODE) {
+      gate.classList.add("unlocked");
+      input.blur();
+    } else {
+      err.textContent = "验证码错误，请重新输入";
+      input.value = "";
+      input.focus();
+    }
+  }
+
+  btn.addEventListener("click", tryUnlock);
+  input.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") tryUnlock();
+  });
+  input.addEventListener("input", function () {
+    err.textContent = "";
+  });
+})();
+
 // ===== 启动 =====
 document.getElementById("startBtn").addEventListener("click", () => {
   reset();
