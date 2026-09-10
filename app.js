@@ -890,13 +890,16 @@ function showResult() {
     .map((h) => '<span class="clan-hero">' + h.emoji + " " + h.name + "</span>")
     .join("");
 
+  const matchPct = Math.max(50, Math.min(99, Math.round(top.normScore * 48 + 50)));
+
   resultBox.innerHTML =
-    '<div class="result-hero">' + hero.emoji + "</div>" +
+    '<div class="result-hero-wrap"><div class="result-hero">' + hero.emoji + "</div></div>" +
     '<div class="result-tag">你的灵魂英雄</div>' +
     '<div class="result-name">' + hero.name + "</div>" +
     '<div class="result-role">' + hero.role + "</div>" +
+    '<div class="result-match">人格契合度 ' + matchPct + "%</div>" +
     '<div class="result-slogan">「' + hero.slogan + "」</div>" +
-    '<div class="result-archetype">你的人格原型：' + arch.name + " · " + arch.keyword + "</div>" +
+    '<div class="result-archetype">' + arch.name + " · " + arch.keyword + "</div>" +
     '<div class="desc-card">' +
     "<h3>人格解析</h3>" +
     "<p>" + arch.desc + "</p>" +
@@ -915,7 +918,8 @@ function showResult() {
     '<div class="rank-list">' + rankRows + "</div>" +
     "</div>" +
     '<div class="result-actions">' +
-    '<button class="btn-primary" id="retryBtn">再测一次</button>' +
+    '<button class="btn-primary shimmer" id="retryBtn"><span class="btn-text">再测一次</span><span class="btn-shine"></span></button>' +
+    '<p class="share-tip">截图分享给朋友，看看 ta 是哪个英雄</p>' +
     "</div>";
 
   showPage(resultPage);
@@ -927,6 +931,36 @@ function showResult() {
   });
 
   document.getElementById("retryBtn").addEventListener("click", reset);
+}
+
+// 粒子背景
+(function createParticles() {
+  const box = document.getElementById("particles");
+  if (!box) return;
+  const count = 16;
+  for (let i = 0; i < count; i++) {
+    const p = document.createElement("span");
+    p.className = "particle";
+    p.style.left = Math.random() * 100 + "%";
+    p.style.top = Math.random() * 100 + "%";
+    p.style.width = 2 + Math.random() * 3 + "px";
+    p.style.height = p.style.width;
+    p.style.animationDuration = 8 + Math.random() * 10 + "s";
+    p.style.animationDelay = Math.random() * 5 + "s";
+    box.appendChild(p);
+  }
+})();
+
+// 选项 touch/mouse 跟随高亮（只在触摸/移动时产生局部光晕）
+if (document.addEventListener) {
+  document.addEventListener("pointermove", (e) => {
+    if (!e.target.classList.contains("option")) return;
+    const rect = e.target.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    e.target.style.setProperty("--mx", x + "%");
+    e.target.style.setProperty("--my", y + "%");
+  });
 }
 
 function reset() {
